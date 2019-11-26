@@ -63,6 +63,7 @@ let delay = 1200;
 let cardCount = 24;
 let guessCount = 0;
 
+
 // Add match CSS
 let match = function() {
   let selected = document.querySelectorAll('.selected');
@@ -84,14 +85,23 @@ let match = function() {
         endMessage.classList.add('endMessage');
         endMessage.textContent = `you did it in ${guessCount} guesses`;
 
+        let endButton = document.createElement('button');
+        endButton.classList.add('endButton');
+        endButton.textContent = "Play again";
+        endButton.onclick = refreshPage;
+
         grid.appendChild(endBox);
         endBox.appendChild(endTitle);
         endBox.appendChild(endMessage);
+        endBox.appendChild(endButton);
      };
+
+     function refreshPage(){
+         history.go(0);
+         return;
+     }
   }
 };
-
-
 
 // Reset guesses after two attempts
 let resetGuesses = function() {
@@ -111,6 +121,7 @@ let resetGuesses = function() {
 grid.addEventListener('click', function(event) {
   // Declare variable to target our clicked item
   let clicked = event.target;
+
   // Do not allow the grid section itself to be selected;
   // only select divs inside the grid
   if (clicked.nodeName === 'SECTION' || clicked === previousTarget || clicked.parentNode.classList.contains('match') || clicked.parentNode.classList.contains('selected')) {
