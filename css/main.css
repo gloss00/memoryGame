@@ -75,26 +75,39 @@ body {
 }
 
 .endBox {
-    background-color: green;
+    background-color: #4CAF50;
     width: 900px;
     max-width: 960px;
-    height: 150px;
+    height: 170px;
     position: absolute;
     top: 150px;
+    margin: auto;
     border-radius: 100px;
     text-align: center;
     color: #fff;
     font-family: sans-serif;
-    border: 3px solid yellow;
-    margin: auto;
+    border: 10px solid #009933;
 }
 
 .endTitle {
-    font-size: 2rem;
+    font-size: 2.5rem;
+    margin: auto;
+    line-height: 50px;
 }
-
 
 .endMessage {
     font-size: 1.5rem;
+    margin: auto;
+    line-height: 50px;
+}
+
+.endButton {
+    height: 30px;
+    width: 100px;
+    font-family: sans-serif;
+    border-radius: 100px;
+    border: 2px solid #D0D3D4;
+
+
 
 }
