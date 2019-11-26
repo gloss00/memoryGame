@@ -32,7 +32,6 @@ body {
 }
 
 .card {
-  /* position: relative; */
   transition: all .4s linear;
   transform-style: preserve-3d;
   margin: 5px;
@@ -53,7 +52,7 @@ body {
 
 .front {
   z-index: 2;
-  background: #fff url('../image/question.png') no-repeat center center / contain;
+  background: #fff url('../image/question.png') no-repeat center center / cover;
   border: 5px solid #005EA5;
 }
 
